@@ -1,0 +1,12 @@
+[gr1]
+host1.domain.com ansible_host=192.168.0.1
+
+[gr2]
+host2.domain.com ansible_host=192.168.0.2
+
+[gr3]
+host3.domain.com ansible_host=192.168.0.3
+
+[gr4:children]
+gr1
+gr2

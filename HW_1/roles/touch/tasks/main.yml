@@ -1,0 +1,10 @@
+- name: Check existance
+  stat:
+    path: ~/example.txt
+  register: stat_res
+
+- name: Touch file
+  file:
+    path: ~/example.txt
+    state: touch 
+  when: not stat_res.stat.exists

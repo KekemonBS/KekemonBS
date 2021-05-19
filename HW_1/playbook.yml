@@ -1,0 +1,9 @@
+---
+- name: Create file and print out OS name and kernel version
+  hosts: all
+  become: yes
+
+
+  roles:
+    - touch
+    - uname_sr
